@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">Untitled</div>
+        <div class="menu-bar">
+            <div class="filename">
+                <input type="text" name="filename" placeholder="" id="filename">
+            </div>
+            <div class="tools">
+                <div class="download material-icons">file_download</div>
+                <div class="language">
+                    <select name="languages" id="lang" onchange="changelanguage()">
+                        <option value="cpp" selected>C++</option>
+                        <option value="java">Java</option>
+                        <option value="c">C</option>
+                        <option value="python">Pyhton</option>
+                        <option value="php">PHP</option>
+                      </select>
+                </div>
+                <button class="execute" onclick="executeCode()"><div class="run material-icons">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="20" fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+                        <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8l3.147-3.146zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8l-3.147-3.146z"/>
+                      </svg>
+                </div></button>
+                
+            </div>
+        </div>
+        <div class="body">
+            <div id="editor-container"></div>
+            <div class="io-container">
+                INPUT
+                <div class="input" contenteditable="true"></div>
+                OUTPUT
+                <div class="output" ></div>
+            </div>
+        </div>
+    </div>
+    <script src="./lib/ace.js"></script>
+    <script src="./lib/theme-monokai.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
